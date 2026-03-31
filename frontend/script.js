@@ -11,7 +11,6 @@ const confidenceFill = document.getElementById('confidence-fill');
 const resultExplanation = document.getElementById('result-explanation');
 const resetBtn = document.getElementById('reset-btn');
 
-// Trigger file input on click
 browseBtn.addEventListener('click', () => {
     fileInput.click();
 });
