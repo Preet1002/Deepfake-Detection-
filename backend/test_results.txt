@@ -1,0 +1,7 @@
+Testing the /api/detect endpoint with a real image...
+Status: 200
+JSON Response: {'label': 'REAL', 'confidence': 0.7594544887542725}
+Test passed! The model successfully classified the image as REAL.
+
+Testing with an artificial image (Fake)...
+Could not download fake image for testing, skipping this part. HTTP Error 404: Not Found

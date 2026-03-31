@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detector - AI Truth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">🔍</span>
+                <h1>Deepfake<span class="highlight">Guard</span></h1>
+            </div>
+            <p class="subtitle">State-of-the-art vision models to detect AI-generated and manipulated images.</p>
+        </header>
+
+        <main>
+            <div class="upload-section glass-panel" id="upload-section">
+                <input type="file" id="file-input" accept="image/*" hidden>
+                <div class="upload-zone" id="drop-zone">
+                    <div class="upload-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h2>Drag & Drop your image here</h2>
+                    <p>or</p>
+                    <button class="btn-primary" id="browse-btn">Browse Files</button>
+                    <p class="formats">Supports JPG, PNG, JPEG</p>
+                </div>
+            </div>
+
+            <div class="loading-section glass-panel hidden" id="loading-section">
+                <div class="spinner"></div>
+                <p>Analyzing image with deep learning models...</p>
+            </div>
+
+            <div class="result-section glass-panel hidden" id="result-section">
+                <div class="result-content">
+                    <div class="image-preview">
+                        <img id="preview-img" src="" alt="Uploaded image preview">
+                    </div>
+                    <div class="analysis-results">
+                        <h3>Analysis Result</h3>
+                        <div class="badge-container">
+                            <div class="result-badge" id="result-badge">REAL</div>
+                        </div>
+                        <div class="confidence-container">
+                            <div class="confidence-header">
+                                <span>Confidence Score</span>
+                                <span id="confidence-text">98%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" id="confidence-fill"></div>
+                            </div>
+                        </div>
+                        <p class="explanation" id="result-explanation">This image shows natural features and lighting consistent with a real photograph.</p>
+                        <button class="btn-secondary" id="reset-btn">Analyze Another Image</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
